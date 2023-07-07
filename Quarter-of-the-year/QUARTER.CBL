@@ -11,6 +11,9 @@
        01 RESULT PIC 9(1).
       *-------------------
        PROCEDURE DIVISION USING MONTH RESULT.
+      *yilda 4 ceyrek vardir. Her ceyrek 3 ardasik ayi kapsar.
+      * ilk 3 aydan baslayarak kontrol
+      * switch-case mantigi ile kontrol gerceklestirilir.
            EVALUATE TRUE
               WHEN MONTH <= 3
                  MOVE 1 TO RESULT
