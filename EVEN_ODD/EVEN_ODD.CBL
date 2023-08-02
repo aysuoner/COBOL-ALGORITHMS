@@ -1,0 +1,17 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. EVEN-OR-ODD.
+       AUTHOR. AYSU ONER.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  REM1   PIC 9(01).
+       LINKAGE SECTION.
+       01 NUM         PIC S9(08).
+       01 RESULT      PIC A(04).
+       PROCEDURE DIVISION USING NUM RESULT.
+           COMPUTE REM1 = FUNCTION REM (NUM, 2).
+           IF REM1 IS = ZERO
+              MOVE 'EVEN' TO RESULT
+           ELSE
+              MOVE 'ODD' TO RESULT
+           END-IF.
+       END PROGRAM EVEN-OR-ODD.
