@@ -1,0 +1,11 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. LITERS.
+       DATA DIVISION.
+       LINKAGE SECTION.
+       01 H           PIC 9(8)V9(2).
+       01 RESULT      PIC 9(10).
+       PROCEDURE DIVISION USING H RESULT.
+           MOVE 0   TO RESULT.
+           COMPUTE RESULT = H * 0.5.
+           GOBACK.
+       END PROGRAM LITERS.
